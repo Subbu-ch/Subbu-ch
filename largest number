@@ -1,0 +1,7 @@
+def extract_numbers(s=""):
+    import re
+    numbers=re.findall(r'\d+',s)
+    numbers=[int(num)for num in numbers if '9' not in num]
+    return max(numbers) if numbers else -1
+s=input()
+print(extract_numbers(s))
